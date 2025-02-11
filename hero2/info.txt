@@ -54,14 +54,14 @@ Steps for url routing inside the applications:
 
 11. Defining functions in views.py of dc app
 
-      from django.urls import path
-      from dc import views
+      from django.http import HttpResponse
+      # Create your views here.
 
-      urlpatterns = [
-      path('superman/',views.superman),
-      path('batman/',views.batman),
+      def superman(request):
+      return HttpResponse('I am superman')
 
-      ]
+      def batman(request):
+      return HttpResponse('I am batman')
 
 11.1 Defining in urls.py of dc app             # app_name = dc
 
