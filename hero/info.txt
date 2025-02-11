@@ -25,6 +25,8 @@ steps for creating applications and url routing inside urls.py of project folder
 
 6. Now write logic in views.py of core app
 
+    from django.http import HttpResponse
+
     def index(request):
     return HttpResponse('<h1> This is a home page </h1>')
 
