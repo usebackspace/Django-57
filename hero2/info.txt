@@ -82,8 +82,8 @@ Steps for url routing inside the applications:
 
       urlpatterns = [
       path('admin/', admin.site.urls),
-      path('marvel/',include('marvel.urls'))
-      path('dc/',include('dc.urls')),
+      path('',include('marvel.urls'))
+      path('',include('dc.urls')),
       ]
 
 13. Now runserver - python manage.py runserver
