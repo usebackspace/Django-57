@@ -1,6 +1,6 @@
 TIPF - Template inside project folder
 
-In this project we will create seperate template folder inside project i.e TIPF
+In this project we will create seperate templates folder inside project i.e TIPF
 
 1. Create project -  django-admin startproject TIPF
 
