@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static "core/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "core/css/main.css" %}">
+</head>
+<body>
+    <h1>DTL</h1>
+
+    <h2>{{villian}}</h2>
+    <h2>{{villian|upper}}</h2>
+
+    <h1>====== If condition ======</h1>
+    {% if villian == 'goblin' %}
+        <h2>Color of villian is Green</h2>
+    {% endif %}
+        
+
+    <h1>====== If Else condition ======</h1>
+    {% if villian == 'goblin' %}
+        <h2>Color of villian is Green</h2>
+    {% else %}
+        <h2> All villian are dead</h2>
+    {% endif %}
+
+    <h1>====== Elif condition ======</h1>
+    {% if villian == 'goblin' %}
+        <h2>Color of villian is Green</h2>
+    {% elif villian == 'thanos' %}
+        <h2>Color of villian is bangan</h2>
+    {% elif villian == 'redskull' %}
+        <h2>Color of villian is Red</h2>
+    {% else %}
+        <h2> All villian are dead</h2>
+    {% endif %}
+
+
+    <h2>{{hero}}</h2>
+
+    <script src="{% static "core/js/jquery.js" %}"></script>
+    <script src="{% static "core/js/popper.js" %}"></script>
+    <script src="{% static "core/js/bootstrap.min.js" %}"></script>
+</body>
+</html>
