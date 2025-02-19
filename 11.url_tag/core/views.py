@@ -6,3 +6,7 @@ def index(request):
 
 def about(request):
     return render(request,'core/about.html')
+
+def about1(request,id):
+    print(id)
+    return render(request,'core/about.html')
