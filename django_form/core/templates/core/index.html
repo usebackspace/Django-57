@@ -16,8 +16,21 @@
         {{mf.as_p}}
         <input type="submit">
     </form>
-    
 
+    <hr><br>
+    <h1>Rendering feild manually</h1>
+    
+    {{mf.name}}<br><br>
+    {{mf.name.label}}<br><br>
+    {{mf.name.label_tag}}<br><br>
+    {{mf.name.id_for_label}}<br><br>
+    
+    <h1>Rendering feild for loop</h1>
+
+    {% for m in mf %}
+        {{m.label_tag}} {{m}} <br>
+    {% endfor %}
+    
     <script src="{% static "core/js/jquery.js" %}"></script>
     <script src="{% static "core/js/popper.js" %}"></script>
     <script src="{% static "core/js/bootstrap.min.js" %}"></script>
