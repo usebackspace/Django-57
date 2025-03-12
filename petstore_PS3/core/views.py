@@ -108,8 +108,7 @@ def changepassword(request):                                       # Password Ch
     else:
         return redirect('login')
     
-
-
+    
 # ============================ Add To Cart ====================================
 
 def add_to_cart(request,id):
