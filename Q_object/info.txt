@@ -1,0 +1,6 @@
+Q object is a way to build complex queries—especially when you want to use OR, NOT, or AND conditions in your queries.
+
+   Condition	  Use this
+OR conditions	  Q(condition1) | Q(condition2)
+AND conditions	  Q(condition1) & Q(condition2)
+NOT conditions	  ~Q(condition)

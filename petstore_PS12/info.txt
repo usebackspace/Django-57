@@ -1,0 +1,27 @@
+In this phase We will work on Search Component.
+
+1. We have slight change In Search tab of Navbar
+
+<form class="form-inline my-lg-0 mr-auto"  method="GET" action="{% url 'pet_search' %}">
+        <input class="form-control custom-search-bar mr-2 " type="search" placeholder="Search Pet" name="q" value="{{ query }}" aria-label="Search" style="width:300px">
+        <button class="btn  btn-outline-success  my-2 my-sm-0" type="submit">Search</button>
+ </form>
+
+2. Then we have added search url
+
+    path('search', views.pet_search, name='pet_search'),
+
+
+3. Then view added view Function.
+def pet_search(request):
+    query = request.GET.get('q')
+    if query:
+        pet = Pet.objects.filter(name__icontains=query)
+    else:
+        pet = Pet.objects.all()
+    
+    context = {
+        'pet_category': pet,
+        'query': query,
+    }
+    return render(request, 'core/pet_search.html', context)
